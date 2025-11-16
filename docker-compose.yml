@@ -1,0 +1,14 @@
+services:
+  questdb:
+    image: questdb/questdb:7.3.10
+    container_name: crypto-backtest-questdb
+    ports:
+      - "9000:9000"    # Web console
+      - "8812:8812"    # PostgreSQL wire protocol
+      - "9009:9009"    # InfluxDB line protocol
+    volumes:
+      - ./data/questdb:/var/lib/questdb
+    environment:
+      - QDB_CAIRO_COMMIT_LAG=1000
+      - QDB_PG_ENABLED=true
+    restart: unless-stopped
