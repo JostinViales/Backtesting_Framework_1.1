@@ -1,0 +1,24 @@
+# config/backtesting.yaml
+backtesting:
+  initial_capital: 500
+  commission: 0.001  # 0.1%
+  slippage: 0.0005   # 0.05%
+
+  # For perpetuals
+  leverage:
+    max: 10  # Start conservative
+    default: 2
+
+  # Risk management
+  risk:
+    max_position_size_pct: 0.95  # Max 95% of capital in one position
+    max_drawdown_pct: 0.50       # Stop trading if 50% drawdown
+
+optimization:
+  n_trials: 100
+  timeout_seconds: 3600  # 1 hour max
+
+  walk_forward:
+    train_window_days: 180
+    test_window_days: 30
+    step_size_days: 30

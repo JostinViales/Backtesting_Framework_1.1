@@ -1,0 +1,32 @@
+# config/exchanges.yaml
+exchanges:
+  binance:
+    name: Binance
+    enabled: true
+    rate_limit: 1200  # requests per minute
+    default_type: spot
+
+  okx:
+    name: OKX
+    enabled: true
+    rate_limit: 2000
+    default_type: swap  # for perpetuals
+
+  bybit:
+    name: Bybit
+    enabled: false
+    rate_limit: 1000
+
+symbols:
+  - BTC/USDT
+  - SOL/USDT
+  - OP/USDT
+  - TIA/USDT
+
+timeframes:
+  - 1m
+  - 5m
+  - 15m
+  - 1h
+  - 4h
+  - 24h
