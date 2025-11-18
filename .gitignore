@@ -40,7 +40,7 @@ env/
 .ipynb_checkpoints
 
 # Environment variables
-.env
+config/.env
 .env.local
 
 # Database
@@ -67,7 +67,7 @@ htmlcov/
 # data/
 
 # Environment variables
-.env
+config/.env
 
 # Data directories
 data/
